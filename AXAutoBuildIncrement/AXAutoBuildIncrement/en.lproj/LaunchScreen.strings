@@ -4,3 +4,6 @@
 
 /* Class = "UILabel"; text = "__BUILD__"; ObjectID = "P4n-pm-C1I"; */
 "P4n-pm-C1I.text" = "__BUILD__";
+
+/* Class = "UILabel"; text = "__GITHASH__"; ObjectID = "izq-Fd-u6F"; */
+"izq-Fd-u6F.text" = "__GITHASH__";
