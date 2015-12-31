@@ -17,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // force to wait 3 seconds (not stupid, just to see if version/buil script worked)
+    sleep(3.0F);
     return YES;
 }
 

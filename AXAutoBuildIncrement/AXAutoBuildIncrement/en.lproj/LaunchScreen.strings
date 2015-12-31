@@ -1,6 +1,6 @@
 
-/* Class = "UILabel"; text = "VERSION"; ObjectID = "63h-br-nL3"; */
-"63h-br-nL3.text" = "VERSION";
+/* Class = "UILabel"; text = "__VERSION__"; ObjectID = "63h-br-nL3"; */
+"63h-br-nL3.text" = "__VERSION__";
 
-/* Class = "UILabel"; text = "BUILD"; ObjectID = "P4n-pm-C1I"; */
-"P4n-pm-C1I.text" = "BUILD";
+/* Class = "UILabel"; text = "__BUILD__"; ObjectID = "P4n-pm-C1I"; */
+"P4n-pm-C1I.text" = "__BUILD__";
