@@ -1,0 +1,2 @@
+xcodebuild -project AXFoundation.xcodeproj -scheme AXFoundationIOS -configuration Release -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+xcodebuild -project AXFoundation.xcodeproj -scheme AXFoundationOSX -configuration Release ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
