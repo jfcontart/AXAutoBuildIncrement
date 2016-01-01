@@ -85,6 +85,7 @@ Just clone, check on the option for recursive dependencies checkout.
 
 ## Services
 This repository use :
+ - HéphaïCode for convention : http://hephaiscode.com
  - GitHub for source control : https://github.com
  - Travis for continous integration : https://travis-ci.org
  - Coveralls for code coverage : https://coveralls.io
