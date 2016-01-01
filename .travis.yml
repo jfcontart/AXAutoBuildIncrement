@@ -1,0 +1,17 @@
+
+sudo: required
+
+language: objective-c
+
+before_install:
+- chmod +x ./travis/before_script.sh
+- chmod +x ./travis/install.sh
+- chmod +x ./travis/script.sh
+- gem install slather --no-rdoc --no-ri --no-document --quiet
+
+before_script: ./travis/before_script.sh
+install: ./travis/install.sh
+script: ./travis/script.sh
+
+after_success: slather
+
