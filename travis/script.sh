@@ -1,1 +1,1 @@
-xcodebuild -project AXAutoBuildIncrement.xcodeproj -scheme AXAutoBuildIncrement -configuration Debug -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+xcodebuild -project AXAutoBuildIncrement.xcodeproj -scheme AXAutoBuildIncrement -configuration Debug -sdk iphonesimulator -arch i386 -arch x86_64 ONLY_ACTIVE_ARCH=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
