@@ -12,8 +12,8 @@
 
 ## States of Projet
 
-[![Build Status](https://travis-ci.org/idemobi/AXAutoBuildIncrement.svg?branch=master)](https://travis-ci.org/idemobi/AXAutoBuildIncrement)
-[![Build Status](http://img.shields.io/coveralls/idemobi/AXAutoBuildIncrement.svg?branch=master)](http://img.shields.io/coveralls/idemobi/AXAutoBuildIncrement)
+[![Build Status](https://travis-ci.org/jfcontart/AXAutoBuildIncrement.svg?branch=master)](https://travis-ci.org/jfcontart/AXAutoBuildIncrement)
+[![Build Status](http://img.shields.io/coveralls/jfcontart/AXAutoBuildIncrement.svg?branch=master)](http://img.shields.io/coveralls/jfcontart/AXAutoBuildIncrement)
 
 ## Platform and Languages
 ![Platform Status](https://img.shields.io/badge/platform-iOS-lightgray.svg)
