@@ -11,8 +11,10 @@
 @interface ViewController : UIViewController {
     IBOutlet UILabel *mVersionLabel;
     IBOutlet UILabel *mBuildLabel;
+    IBOutlet UIButton *mSettingsButton;
 }
 
+-(IBAction)openSettingsAction:(id)sSender;
 
 @end
 

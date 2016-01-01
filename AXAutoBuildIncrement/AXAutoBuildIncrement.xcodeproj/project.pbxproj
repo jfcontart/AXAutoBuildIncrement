@@ -14,6 +14,7 @@
 		6886A3801C355EB800A0364B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6886A37F1C355EB800A0364B /* Assets.xcassets */; };
 		6886A3831C355EB800A0364B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6886A3811C355EB800A0364B /* LaunchScreen.storyboard */; };
 		6886A38E1C355EB800A0364B /* AXAutoBuildIncrementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6886A38D1C355EB800A0364B /* AXAutoBuildIncrementTests.m */; };
+		6886A3AF1C36D05300A0364B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6886A3AE1C36D05300A0364B /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		6886A38F1C355EB800A0364B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6886A3981C355FF000A0364B /* AXAutoBuildIncrement.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = AXAutoBuildIncrement.sh; sourceTree = "<group>"; };
 		6886A3A81C356B3100A0364B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		6886A3AD1C369BC400A0364B /* AXAutoGitClean.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = AXAutoGitClean.sh; sourceTree = "<group>"; };
+		6886A3AE1C36D05300A0364B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +90,9 @@
 				6886A3771C355EB800A0364B /* AppDelegate.m */,
 				6886A3791C355EB800A0364B /* ViewController.h */,
 				6886A37A1C355EB800A0364B /* ViewController.m */,
-				6886A37C1C355EB800A0364B /* Main.storyboard */,
-				6886A37F1C355EB800A0364B /* Assets.xcassets */,
-				6886A3811C355EB800A0364B /* LaunchScreen.storyboard */,
-				6886A3841C355EB800A0364B /* Info.plist */,
+				6886A3B01C36D06300A0364B /* Strings */,
+				6886A3B11C36D06F00A0364B /* XIBs */,
+				6886A3B21C36D08700A0364B /* Assets */,
 				6886A3731C355EB800A0364B /* Supporting Files */,
 			);
 			path = AXAutoBuildIncrement;
@@ -99,7 +101,9 @@
 		6886A3731C355EB800A0364B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6886A3841C355EB800A0364B /* Info.plist */,
 				6886A3981C355FF000A0364B /* AXAutoBuildIncrement.sh */,
+				6886A3AD1C369BC400A0364B /* AXAutoGitClean.sh */,
 				6886A3741C355EB800A0364B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -114,6 +118,31 @@
 			path = AXAutoBuildIncrementTests;
 			sourceTree = "<group>";
 		};
+		6886A3B01C36D06300A0364B /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				6886A3AE1C36D05300A0364B /* Localizable.strings */,
+			);
+			name = Strings;
+			sourceTree = "<group>";
+		};
+		6886A3B11C36D06F00A0364B /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				6886A37C1C355EB800A0364B /* Main.storyboard */,
+				6886A3811C355EB800A0364B /* LaunchScreen.storyboard */,
+			);
+			name = XIBs;
+			sourceTree = "<group>";
+		};
+		6886A3B21C36D08700A0364B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6886A37F1C355EB800A0364B /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +155,7 @@
 				6886A36D1C355EB800A0364B /* Frameworks */,
 				6886A36E1C355EB800A0364B /* Resources */,
 				6886A3A91C356D6500A0364B /* ShellScript */,
+				6886A3AC1C368F0E00A0364B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -197,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6886A3831C355EB800A0364B /* LaunchScreen.storyboard in Resources */,
+				6886A3AF1C36D05300A0364B /* Localizable.strings in Resources */,
 				6886A3801C355EB800A0364B /* Assets.xcassets in Resources */,
 				6886A37E1C355EB800A0364B /* Main.storyboard in Resources */,
 			);
@@ -223,7 +254,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n#------------------------------\n# idéMobi 2015©\n#------------------------------\n\n\n#------------------------------\n# Git clean\n#------------------------------\n# remove all user datas\nfind \"${PROJECT_DIR}\" -name *.xcuserdatad -print0 | xargs -0 git rm -f -r --ignore-unmatch\n\n# nettoyage des fichiers .DS_Store qui peuvent pénaliser les synchro SVN ou GIT\nfind \"${PROJECT_DIR}\" -name \".DS_Store\" -print0 | xargs -0 rm -rf\n\n# debug & configuration tracer\n\n\n#------------------------------\n# Version and buid management\n#------------------------------\n\n# documentation https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html\n\n##### VERSION WITH BUID AUTO INCREMENT #####\n\n##### DETERMINE BUILD FROM INFO.PLIST #####\n\nBUILDNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${INFOPLIST_FILE}\")\nNEWBUILDNUM=$(($BUILDNUM + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $NEWBUILDNUM\" \"${INFOPLIST_FILE}\"\n\n##### DETERMINE GIT REVISION #####\n\n# install Git Tag\nBUILD_GIT_TAG=`git tag | tail -n 1`\n/usr/libexec/PlistBuddy -c  \"Delete GITTag\" \"${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c  \"Add GITTag string $BUILD_GIT_TAG\" \"${INFOPLIST_FILE}\"\n\n# install Git Revision\nBUILD_GIT_NUMBER=`git log --oneline HEAD^1.. | awk '{print $1 }'`\n/usr/libexec/PlistBuddy -c  \"Delete GITHash\" \"${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c  \"Add GITHash string $BUILD_GIT_NUMBER\" \"${INFOPLIST_FILE}\"\n\n##### MODIFY BUILD DATE #####\n\n# install Date\nBUILD_DATE=`date`\n/usr/libexec/PlistBuddy -c  \"Delete BUILD_DATE\" \"${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c  \"Add BUILD_DATE string $BUILD_DATE\" \"${INFOPLIST_FILE}\"\n\n##### MODIFY BUILD USER #####\n\n# install USERNAME\nBUILD_USERNAME=\"$(id -u -n)\"\n/usr/libexec/PlistBuddy -c  \"Delete BUILD_USERNAME\" \"${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c  \"Add BUILD_USERNAME string $BUILD_USERNAME\" \"${INFOPLIST_FILE}\"";
+			shellScript = "\n#------------------------------\n# idéMobi 2015©\n#------------------------------\n\n#------------------------------\n# Version and build management part one\n#------------------------------\n\n# get shell source\nsource \"${PROJECT_DIR}/${TARGET_NAME}/AXAutoBuildIncrement.sh\"\n\n# use the first function\nAXPlistPutBuildInformation \"${PROJECT_DIR}\" \"${INFOPLIST_FILE}\"\n\n#------------------------------\n# end\n#------------------------------\n";
 		};
 		6886A3A91C356D6500A0364B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -236,7 +267,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\n#------------------------------\n# idéMobi 2015©\n#------------------------------\n\n# documentation https://developer.apple.com/library/mac/documentation/DeveloperTools/Reference/XcodeBuildSettingRef/1-Build_Setting_Reference/build_setting_ref.html\n\n##### VERSION AND BUID IN LAUNCHSCREEN #####\n\n##### DETERMINE VERSION AND BUILD FROM INFO.PLIST #####\n\nVERSIONNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleShortVersionString\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\")\n\nBUILDNUM=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\")\n\nGITHASHNUM=$(/usr/libexec/PlistBuddy -c \"Print GITHash\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\")\n\n##### DETERMINE STORYBOARDNAME FROM INFO.PLIST #####\n\nSTORYBOARDNAME=$(/usr/libexec/PlistBuddy -c \"Print UILaunchStoryboardName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\")\n\n##### MODIFY LANGUAGE STRING FOR LAUNCHSCREEN #####\nLAUNCHSCREEN=\"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/Base.lproj/$STORYBOARDNAME.storyboardc\"\necho $LAUNCHSCREEN\n# TRY TO FIND FILE LaunchScreen.storyboardc\nif [ -e $LAUNCHSCREEN ];\nthen\n    echo \"file $LAUNCHSCREEN found\"\nelse\n    echo \"file $LAUNCHSCREEN not found\"\nfi\n\ncd \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/\"\n\nfor LPROJ in *.lproj\ndo\necho $LPROJ\nLAUNCHSCREENSTRING=${TARGET_BUILD_DIR}/${TARGET_NAME}.app/$LPROJ/$STORYBOARDNAME.strings\nif [ -e $LAUNCHSCREENSTRING ];\nthen\necho \"file $LAUNCHSCREENSTRING found will change version for $VERSIONNUM\"\n# WE CHANGE VALUE OF \"__VERSION__\"\nperl -i -pe \"s/(\\.text\\\" = \\\")(__VERSION__)(\\\";)/\\1 1.0 \\3\\/\\/__VERSION__/gm\" $LAUNCHSCREENSTRING\nperl -i -pe \"s/\\\"([^\\\"]*)\\\";\\/\\/__VERSION__/\\\"$VERSIONNUM\\\";\\/\\/__VERSION__/gm\" $LAUNCHSCREENSTRING\n# WE CHANGE VALUE OF \"__BUILD__\"\nperl -i -pe \"s/(\\.text\\\" = \\\")(__BUILD__)(\\\";)/\\1 1.0 \\3\\/\\/__BUILD__/gm\" $LAUNCHSCREENSTRING\nperl -i -pe \"s/\\\"([^\\\"]*)\\\";\\/\\/__BUILD__/\\\"$BUILDNUM\\\";\\/\\/__BUILD__/gm\" $LAUNCHSCREENSTRING\n# WE CHANGE VALUE OF \"__GITHASH__\"\nperl -i -pe \"s/(\\.text\\\" = \\\")(__GITHASH__)(\\\";)/\\1 1.0 \\3\\/\\/__GITHASH__/gm\" $LAUNCHSCREENSTRING\nperl -i -pe \"s/\\\"([^\\\"]*)\\\";\\/\\/__GITHASH__/\\\"$GITHASHNUM\\\";\\/\\/__GITHASH__/gm\" $LAUNCHSCREENSTRING\nelse\necho \"file $LAUNCHSCREENSTRING not found\"\n# WE DON'T CHANGE THE VALUE BECAUSE FILE NOT EXIST\nfi\ndone\n\n\n\nopen \"${TARGET_BUILD_DIR}/\"\n#open \"${TARGET_BUILD_DIR}/${TARGET_NAME}.app/\"";
+			shellScript = "\n#------------------------------\n# idéMobi 2015©\n#------------------------------\n\n#------------------------------\n# Version and build management part two \n#------------------------------\n\n#get shell source\nsource \"${PROJECT_DIR}/${TARGET_NAME}/AXAutoBuildIncrement.sh\"\n#use the second function\nAXLaunchScreenBuildInformation \"${TARGET_BUILD_DIR}\" \"${INFOPLIST_PATH}\" \"${TARGET_NAME}\"\n\n#------------------------------\n# end\n#------------------------------";
+		};
+		6886A3AC1C368F0E00A0364B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#------------------------------\n# idéMobi 2015©\n#------------------------------\n\n#------------------------------\n# Version and build management part one\n#------------------------------\n\n# get shell source\nsource \"${PROJECT_DIR}/${TARGET_NAME}/AXAutoGitClean.sh\"\n\n# use the first fonction\nAXAutoGitClean \"${PROJECT_DIR}\"\n\n#------------------------------\n# end\n#------------------------------\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

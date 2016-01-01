@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  AXAutoBuildIncrement
+
+  Created by Jean-François CONTART on 01/01/2016.
+  Copyright © 2016 idéMobi. All rights reserved.
+*/
+
+"Version__String__Format" = "Version %@";
+"Build__String__Format" = "Build %@";
+"GitHash__String__Format" =  " (%@)";
