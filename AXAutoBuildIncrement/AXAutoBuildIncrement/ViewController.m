@@ -19,20 +19,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+     // version with simple string
     NSDictionary *tInfoPlist = [[NSBundle mainBundle] infoDictionary];
     [mVersionLabel setText:[NSString stringWithFormat:NSLocalizedString(@"Version__String__Format",@""), [tInfoPlist objectForKey:@"CFBundleShortVersionString"]]];
-    
-//    // build with basic string
-//    [mBuildLabel setText:[NSString stringWithFormat:@"Build %@-%@", [tInfoPlist objectForKey:@"CFBundleVersion"], [tInfoPlist objectForKey:@"GITHash"]]];
     
     // build with Attribut string
     NSMutableAttributedString *tBuildText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"Build__String__Format",@""), [tInfoPlist objectForKey:@"CFBundleVersion"]] attributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor], NSForegroundColorAttributeName, nil]];
     
     NSMutableAttributedString *tGitHashText = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:NSLocalizedString(@"GitHash__String__Format",@""),[tInfoPlist objectForKey:@"GITHash"]] attributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor grayColor], NSForegroundColorAttributeName, nil]];
-    
     [tBuildText appendAttributedString:tGitHashText];
     [mBuildLabel setAttributedText:tBuildText];
+    
+    // Do any additional setup after loading the view, typically from a nib.
     
 }
 

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BUILD_DATE</key>
-	<string>Fri Jan  1 16:54:14 CET 2016</string>
+	<string>Fri Jan  1 18:32:27 CET 2016</string>
 	<key>BUILD_USERNAME</key>
 	<string>kortex</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -23,9 +23,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>180</string>
+	<string>181</string>
 	<key>GITHash</key>
-	<string>d20f9e5</string>
+	<string>c268bc8</string>
 	<key>GITTag</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
